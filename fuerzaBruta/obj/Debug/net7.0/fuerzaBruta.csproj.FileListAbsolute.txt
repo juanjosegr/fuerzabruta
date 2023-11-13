@@ -1,0 +1,14 @@
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\bin\Debug\net7.0\fuerzaBruta.exe
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\bin\Debug\net7.0\fuerzaBruta.deps.json
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\bin\Debug\net7.0\fuerzaBruta.runtimeconfig.json
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\bin\Debug\net7.0\fuerzaBruta.dll
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\bin\Debug\net7.0\fuerzaBruta.pdb
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.AssemblyInfoInputs.cache
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.AssemblyInfo.cs
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.csproj.CoreCompileInputs.cache
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.dll
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\refint\fuerzaBruta.dll
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.pdb
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\fuerzaBruta.genruntimeconfig.cache
+C:\Users\juanj\RiderProjects\fuerzaBruta\fuerzaBruta\obj\Debug\net7.0\ref\fuerzaBruta.dll
