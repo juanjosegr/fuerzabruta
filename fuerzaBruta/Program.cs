@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Security.Cryptography;
@@ -13,10 +14,14 @@ internal class Program
 
         BuscarContraseñaEnArchivo(contrasenaBuscar, filePath);
 
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+
         var contraseñaEncriptada = EncriptarPaswHash256(contrasenaBuscar);
         Console.WriteLine($"Contraseña encriptada (SHA-256): {contraseñaEncriptada}");
 
         List<string> contraseñasEncriptadas = EncriptarDocumentoHash256(filePath);
+
         if (contraseñasEncriptadas.Contains(contraseñaEncriptada))
         {
             Console.WriteLine("Contraseña encontrada.");
@@ -25,6 +30,9 @@ internal class Program
         {
             Console.WriteLine("No encontrada.");
         }
+
+        stopwatch.Stop();
+        Console.WriteLine($"Tiempo de ejecución: {stopwatch.Elapsed} segundos");
     }
 
     private static void BuscarContraseñaEnArchivo(string contrasenaBuscar, string filePath)
@@ -63,7 +71,7 @@ internal class Program
 
             //Convierte el hash en una cadena hexadecimal.
             StringBuilder builder = new StringBuilder();
-            
+
             for (int i = 0; i < hashBytes.Length; i++)
             {
                 builder.Append(hashBytes[i].ToString("x2"));
@@ -101,7 +109,4 @@ internal class Program
 
         return hashes;
     }
-    
-    
-    
 }
