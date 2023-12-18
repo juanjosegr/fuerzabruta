@@ -121,6 +121,9 @@ internal class Program
         string filePath = "2151220-passwords.txt";
         string contrasenaSeleccionada = "ma930520";
 
+        CancellationTokenSource cancelacionNucleos = new CancellationTokenSource();
+        CancellationToken cancelarNucleos = cancelacionNucleos.Token;
+        
         Stopwatch[] threadStopwatches = new Stopwatch[4];
 
         string contraseñaEncriptada = EncriptarPaswHash256(contrasenaSeleccionada);
@@ -144,10 +147,11 @@ internal class Program
                 threadStopwatches[threadId] = new Stopwatch(); // Inicializa el cronómetro para este hilo
                 threadStopwatches[threadId].Start(); // Inicia el cronómetro para este hilo
 
-                if (buscarContrasenaEnLista(inicio, final, listaDeContrasenas, contraseñaEncriptada))
+                if (buscarContrasenaEnLista(inicio, final, listaDeContrasenas, contraseñaEncriptada, cancelarNucleos))
                 {
                     Console.WriteLine($"Contraseña encontrada en el hilo {threadId}");
                     contrasenaEncontrada = true;
+                    cancelacionNucleos.Cancel();
                 }
 
                 threadStopwatches[threadId].Stop();
@@ -173,10 +177,14 @@ internal class Program
     }
 
     private static bool buscarContrasenaEnLista(int inicio, int final, List<String> listaContrasenas,
-        string contrasenaEncriptada)
+        string contrasenaEncriptada,CancellationToken cancelarNucleos)
     {
         for (int i = inicio; i < final; i++)
         {
+            if (cancelarNucleos.IsCancellationRequested)
+            {
+                return false; 
+            }
             if (listaContrasenas[i] == contrasenaEncriptada)
             {
                 return true;
